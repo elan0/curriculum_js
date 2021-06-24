@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <button>クリック</button>
+            <button type="submit">submit</button>
+            <button type="reset">reset</button>
+            <button type="button">button</button>
+            <button value="A">value</button>
+        </div>
+        <button onclick="alert('こんな感じでボタン要素は使用されることが多いです')">くりっく</button>
+        <button>クリック</button>
+        <script>
+            document.getElementsByTagName("button")[6].onclick = function () {
+                alert("同じ動きをすることが出来ます")
+            };
+        </script>
+    </body>
+</html>

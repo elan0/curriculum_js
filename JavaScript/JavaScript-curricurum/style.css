@@ -1,0 +1,42 @@
+.nav_toggle {
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 20px;
+}
+.nav_toggle i {
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+}
+.nav_toggle i:nth-child(0) {
+    top: 0;
+}
+.nav_toggle i:nth-child(1) {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.nav_toggle i:nth-child(2) {
+    bottom: 0;
+}
+
+.top {
+    width: 100%;
+    height: 20vh;
+    background-color: blue;
+    transition: all 3s ease;
+}
+.top:hover {
+    width: 0;
+    transition: all 3s ease;
+}
+/*
+ease            開始時と終了時は緩やかに変化します。
+linear          開始から終了まで一定に変化します。
+ease-in         開始時は緩やかに変化、終了に近づくと早く変化します。
+ease-out        開始時は早く変化し、終了時は緩やかに変化します。
+ease-in-oout    開始時と終了時は、かなり緩やかに変化します。
+*/
