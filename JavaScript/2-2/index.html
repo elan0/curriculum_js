@@ -1,32 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UACompatible" content="IE=edge">
-        <title></title>
-        <link rel="stylesheet" href="">
+        <meta name="viewport" content="width=device-width", initial-scale=1.0>
+        <title>Document</title>
     </head>
     <body>
-        <div id="target">HelloWorld!</div>
-        <script src="main.js"></script>
-
-        <!-- pタグに、pointというidをつけます。 -->
-        <p id="point">Hello World!</p>
-        <!-- onclick属性を使って、クリックされたら「myfunc」という関数を実行するように設定
-        myfuncの処理はmain.js側で書きます。 -->
-        <input type="button" value="クリック！" onclick="myfunc()">
-
-            <!-- タグそのものを指定して抜き出す -->
-        <h1>Hello World!</h1>
-        <p>Let's study JavaScript</p>
-    
-        <h1>こんにちは！</h1>
-        <p>JavaScriptを勉強しましょう</p>
-    
-        <!-- nameから文字を取り出す -->
-        <div name="box">BOX1</div>
-        <div name="box">BOX2</div>
-        <div name="box">BOX3</div>
-        <div name="elem">BOX4</div>
+        <input type="button" value="ボタン" onclick="changeBtn()">
+        <p id="p1">ボタンが押されると表示非表示が切り替わります</p>
+        <script>
+            document.getElementById("p1").style.display = "block";
+            function changeBtn() {
+                // ①id「p1」の要素を取得
+                let displays = document.getElementById("p1");
+                console.log(displays.style.display);
+            // ②取得したp1に「display:none」が無かったら、「display:none」を付与する。
+            // 取得したp1に「display:none」があったら、「display:block」を付与する。
+                if(displays.style.display == "block"){
+                    displays.style.display = "none";
+                } else {
+                    displays.style.display = "block";
+                }
+            }
+        </script>
     </body>
 </html>
