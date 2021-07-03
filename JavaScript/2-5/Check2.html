@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            table {
+                font-size: 1.5em;
+                text-align: center;
+            }
+            th, td {
+                padding: 10px;
+            }
+        </style>
+        <body>
+            <form name = "check">
+                <select name="lunguage" onchange="changeLang()">
+                    <option id="select">選択してください</option>
+                    <option id="selected_jpn">日本語</option>
+                    <option id="select_en">English</option>
+                    <option id="select_all">すべて表示</option>
+                </select>
+            </form>
+            <table>
+                <tr>
+                    <th>日本</th>
+                    <td>こんにちは</td>
+                    <td>ありがとう</td>
+                    <td>さようなら</td>
+                </tr>
+                <tr>
+                    <th>English</th>
+                    <td>Hello</td>
+                    <td>Thank you</td>
+                    <td>Good Bye</td>
+                </tr>
+            </table>
+            <script>
+                // onchangeで使用されている関数の中身を実装してください。
+                function changeLang() {
+                    let tableTr = document.getElementsByTagName("tr");
+                    if(document.check.lunguage.selectedIndex == 1) {
+                        tableTr[0].style.display = "block";
+                        tableTr[1].style.display = "none";
+                    } else if(document.check.lunguage.selectedIndex == 2) {
+                        tableTr[0].style.display = "none";
+                        tableTr[1].style.display = "block";
+                    } else {
+                        tableTr[0].style.display = "block";
+                        tableTr[1].style.display = "block";
+                    }
+                }
+            </script>
+        </body>
+    </head>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
