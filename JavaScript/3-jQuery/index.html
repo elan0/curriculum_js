@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- jqueryのインストール方法 -->
+        <script
+        src="https://code.jquery.com/jquery-3.6.0.js"       
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+        </script>
+        <input type="button" value="クリック">
+        <script>
+            //クリックされた時に機能発動
+            $('button').on("click", function() {
+                $('.left, .right').toggleClass('action');
+            })
+
+            //appendで～の要素を追加
+            $(".list").append("<il>追加される要素</il>");
+
+            //removeは外せない
+            $(".list").remove();
+
+            //addClassメソッド、.を()内に入力すると動かなくなる。。。
+            $(".list").addClass("active");
+
+            //toggleClassで2つのクラスを持たせることが出来る
+            $('.left, .right').toggleClass('action');
+
+
+
+            // ＊メソッドチェーンについて＊
+            $("p").css('color', 'blue');
+            $("p").text('ありがとう');
+            //一つの動作に対して異なる二つの行動をする時、メソッドチェーンで動作を減らせる
+            $("p").scc('color','blue').text('ありがとう')
+
+        </script>
+    </body>
+</html>
